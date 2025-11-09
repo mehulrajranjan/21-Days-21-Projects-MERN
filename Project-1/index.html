@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExploreWorld</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <nav role="navigation" aria-label="main navigation">
+        <h1>ExploreWorld</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#book-now">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="home" role="region" aria-label="home section">
+    <video  class="bg-video"
+        src="https://www.pexels.com/download/video/3015510/"
+        autoplay
+        loop
+        muted
+        playsinline>
+    </video>
+    <div class="overlay" ></div>
+    <div class="home-content container">
+        <h2>Discover Your Next Adventure</h2>
+        <p>Explore the world's most beautiful destinations with us.</p>
+        <a href="#packages" aria-label="Packages" class="btn">View Packages</a>
+    </div>
+  </section>
+
+  <section id="destinations" role="region" aria-label="Destination section">
+    <div class="container">
+      <h2>Popular Destinations</h2>
+      <div class="destination-grid">
+        <article class="destination-card">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1683120751032-41fdd5226ab6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHBhcmlzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+              alt="Paris, France"
+            />
+            <h3>Paris, France</h3>
+        </article>
+        <article class="destination-card">
+            <img
+              src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hpYnV5YXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+              alt="Shibuiya, Japan"
+            />
+            <h3>Shibuiya, Japan</h3>
+        </article>
+        <article class="destination-card">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661963047742-dabc5a735357?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmVuaWNlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+              alt="Venice, Italy"
+            />
+            <h3>Venice, Italy</h3>
+        </article>
+        <article class="destination-card">
+            <img
+              src="https://images.unsplash.com/photo-1712388430474-ace0c16051e2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TWFuYWxpfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+              alt="Manali, India"
+            />
+            <h3>Manali, India</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" role="region" aria-label="Packages Section">
+    <div class="container">
+        <h2>Travel Packages</h2>
+        <div class="package-grid">
+            <article class="package-card">
+                <img src="https://images.unsplash.com/photo-1526816222984-8362d302d9c3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBhcmlzJTIwcGFja2FnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Paris Package" />
+                <h3>Paris Getaway</h3>
+                <p>5 Days, 4 Nights - Explore the city of love with your special someone.</p>
+                <span class="price">$1,499</span>
+                <a href="#book-now" aria-label="Book Paris Getaway" class="btn">Book Now</a>
+            </article>
+            <article class="package-card">
+                <img src="https://images.unsplash.com/photo-1565351185707-f49b89fa86f3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNoaWJ1eWElMjBwYWNrYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Shibuya Package"/>
+                <h3>Shibuya Experience</h3>
+                <p>7 Days, 6 Nights - Dive into the vibrant culture and nightlife of Tokyo.</p>
+                <span class="price">$1,899</span>
+                <a href="#book-now" aria-label="Book Shibuya Experience" class="btn">Book Now</a>
+            </article>
+            <article class="package-card">
+                <img src="https://images.unsplash.com/photo-1640790742307-bbef8aa95cac?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVuaWNlJTIwcGFja2FnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Venice Package"/>
+                <h3>Venice Voyage</h3>
+                <p>6 Days, 5 Nights - Experience the romantic canals and historic sites of
+                    Venice.</p>
+                <span class="price">$1,799</span>
+                <a href="#book-now" aria-label="Book Venice Voyage" class="btn">Book Now</a>    
+
+            </article>
+            <article class="package-card">
+                <img src="https://images.unsplash.com/photo-1711359940524-ed5e0ad9b89b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbmFsaXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Manali Package"/>
+                <h3>Manali Retreat</h3>
+                <p>8 Days, 7 Nights - Enjoy the serene beauty and adventure activities in Manali.</p>
+                <span class="price">$1,599</span>
+                <a href="#book-now" aria-label="Book Manali Retreat" class="btn">Book Now</a>
+            </article>
+        </div>
+    </div>
+  </section>
+
+ <section id="testimonials" role="region" aria-label="Testimonials Section">
+  <div class="container">
+    <h2>What Our Travelers Say</h2>
+    <div class="testimonial-grid"> 
+      <blockquote class="testimonial">
+        <i class="fa-solid fa-quote-left fa-2x"></i>
+        <p>“ExploreWorld made our honeymoon unforgettable! Everything was perfectly arranged.”</p>
+        <h4>- Maverick</h4>
+      </blockquote>
+
+      <blockquote class="testimonial">
+        <i class="fa-solid fa-quote-left fa-2x"></i>
+        <p>“The Shibuya Experience was a blast! The itinerary was packed with fun and cultural activities.”</p>
+        <h4>- Sarah K.</h4>
+      </blockquote>
+
+      <blockquote class="testimonial">
+        <i class="fa-solid fa-quote-left fa-2x"></i>
+        <p>“Venice Voyage exceeded our expectations. The gondola ride was magical!”</p>
+        <h4>- Liam D.</h4>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="book-now" role="form" aria-label="Booking Section">
+  <div class="container">
+    <h2>Ready to Explore?</h2>
+    <p>Contact us today to book your dream vacation!</p>
+    <form aria-label="Booking Form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+    
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+    
+        <label for="package">Select Package:</label>
+        <select id="package" name="package" required>
+            <option value="">--Please choose an option--</option>
+            <option value="paris-getaway">Paris Getaway</option>
+            <option value="shibuya-experience">Shibuya Experience</option>
+            <option value="venice-voyage">Venice Voyage</option>
+            <option value="manali-retreat">Manali Retreat</option>
+        </select>
+        <textarea id="comments" name="comments" rows="4" placeholder="Additional Comments"></textarea>
+        <button type="submit" class="btn">Book Now</button>
+    </form>
+  </div>
+</section>
+<footer role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 ExploreWorld. All rights reserved.</p>
+      <div class="social-media">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div>
+            <h2>Find US</h2>
+           <iframe title="ExploreWorld Office Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019835235083!2d-122.41941538468187!3d37.77492977975932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d9d7b8a3%3A0x47fca1f7b3b9b0e!2sTravel%20Agency!5e0!3m2!1sen!2sin!4v1680000000000" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
