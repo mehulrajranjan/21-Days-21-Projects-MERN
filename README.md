@@ -38,6 +38,28 @@ To consistently build and share small projects every day for 21 days, enhancing 
 
 ---
 
-👋 **Designed & Built by [Mehul Raj Ranjan](https://www.linkedin.com/in/your-linkedin-username/)**  
-💼 [LinkedIn](https://www.linkedin.com/in/mehul-raj-ranjan/) | 💻 [GitHub](https://github.com/mehulrajranjan) | 📧 [Email](mailto:youremail@example.com)
+---
+
+<p align="center">
+  <strong>🌐 Connect with Me</strong><br><br>
+
+  <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/yourusername" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="mailto:youremail@example.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://yourportfolio.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-242424?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+  </a>
+</p>
+
+---
+
+<p align="center">
+  👋 Designed & Built by <strong>Your Name</strong>
+</p>
 
