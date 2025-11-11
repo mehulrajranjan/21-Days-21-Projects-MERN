@@ -43,15 +43,18 @@ To consistently build and share small projects every day for 21 days, enhancing 
 <p align="center">
   <strong>🌐 Connect with Me</strong><br><br>
 
-  <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank">
+  <a href="https://www.linkedin.com/in/mehul-raj-ranjan/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="https://github.com/yourusername" target="_blank">
+  &nbsp;&nbsp;
+  <a href="https://github.com/mehulrajranjan" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
+  &nbsp;&nbsp;
   <a href="mailto:youremail@example.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
+  &nbsp;&nbsp;
   <a href="https://yourportfolio.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-242424?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
   </a>
@@ -60,6 +63,6 @@ To consistently build and share small projects every day for 21 days, enhancing 
 ---
 
 <p align="center">
-  👋 Designed & Built by <strong>Your Name</strong>
+  👋 Designed & Built by <strong>Mehul Raj Ranjan</strong>
 </p>
 
