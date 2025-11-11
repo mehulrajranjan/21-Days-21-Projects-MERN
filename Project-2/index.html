@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <!-- link for font awesome and poppins -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Theme Toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section id="home" class="home" aria-label="Home Section">
+        <div class="home-text">
+            <h1>Welcome to my Portfolio</h1>
+            <p>I'm a <span class="type-text"></span></p>
+            <a href="#work" class="btn" aria-label="view my work">View My Work</a>
+            <div class="social-media" aria-label="Social Media Links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="home-img" aria-label="home image">
+            <img src="image.png" alt="Illustration representing portfolio">
+        </div>
+    </section>
+
+    <section id="work" class="work" aria-label="work section">
+        <h2>Recent Works</h2>
+        <div class="work-grid" role="region" aria-label="work items">
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1738762740722-b4209280df7a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFRyYXZlbCUyMGJvb2tpbmclMjB3ZWJzaXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Project 1 Screenshot">
+                <div class="overlay">                    
+                    <h3>ExploreWorld</h3>
+                    <p>Travel Booking Website</p>
+                    <div class="buttons">
+                        <a href="#" class="view-btn" aria-label="Live Demo for Project 1">Live Demo</a>
+                        <a href="#" class="code-btn" aria-label="View Code for Project 1">View Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1738762740722-b4209280df7a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFRyYXZlbCUyMGJvb2tpbmclMjB3ZWJzaXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Project 1 Screenshot">
+                <div class="overlay">
+                    <h3>ExploreWorld</h3>
+                    <p>Travel Booking Website</p>
+                    <div class="buttons">
+                        <a href="#" class="view-btn" aria-label="Live Demo for Project 1">Live Demo</a>
+                        <a href="#" class="code-btn" aria-label="View Code for Project 1">View Code</a>
+                    </div>
+                </div>                
+            </div>
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1738762740722-b4209280df7a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFRyYXZlbCUyMGJvb2tpbmclMjB3ZWJzaXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Project 1 Screenshot">
+                <div class="overlay">                    
+                    <h3>ExploreWorld</h3>
+                    <p>Travel Booking Website</p>
+                    <div class="buttons">
+                        <a href="#" class="view-btn" aria-label="Live Demo for Project 1">Live Demo</a>
+                        <a href="#" class="code-btn" aria-label="View Code for Project 1">View Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1738762740722-b4209280df7a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFRyYXZlbCUyMGJvb2tpbmclMjB3ZWJzaXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Project 1 Screenshot">
+                <div class="overlay">
+                    <h3>ExploreWorld</h3>
+                    <p>Travel Booking Website</p>
+                    <div class="buttons">
+                        <a href="#" class="view-btn" aria-label="Live Demo for Project 1">Live Demo</a>
+                        <a href="#" class="code-btn" aria-label="View Code for Project 1">View Code</a>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services" aria-label="services section">
+        <h2>Services</h2>
+        <div class="service-grid" role="region">
+            <div class="service-card">
+                <i class="fas fa-code service-icon" aria-hidden="true"></i>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis doloribus hic reiciendis eum inventore voluptatibus.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush service-icon" aria-hidden="true"></i>
+                <h3>UI/UX Design</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui molestias quasi, exercitationem adipisci unde explicabo?</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt service-icon" aria-hidden="true"></i>
+                <h3>Mobile App Development</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur ratione molestias quas voluptate cum ullam.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials" aria-label="testimonials section">
+        <h2>What Clients Say</h2>
+        <div class="testimonial-grid" role="region">
+            <div class="testimonial-card">
+                <div>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe Photo" class="testimonial-img">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta labore ea saepe tempore libero nesciunt animi officia laudantium commodi tenetur facere maxime cumque sapiente vitae, enim, earum exercitationem? Sequi iusto eveniet necessitatibus hic veritatis aliquam deleniti voluptatum explicabo? Repellat quaerat quidem neque quae a optio odio temporibus pariatur laboriosam in!</p>
+                <h4>- John Doe</h4>
+                <span>Student</span>
+            </div>
+            <div class="testimonial-card">
+                <div>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith Photo" class="testimonial-img">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta labore ea saepe tempore libero nesciunt animi officia laudantium commodi tenetur facere maxime cumque sapiente vitae, enim, earum exercitationem? Sequi iusto eveniet necessitatibus hic veritatis aliquam deleniti voluptatum explicabo? Repellat quaerat quidem neque quae a optio odio temporibus pariatur laboriosam in!</p>
+                   
+                <h4>- Jane Smith</h4>
+                <span>Software Engineer, Microsoft</span>
+            </div>
+            <div class="testimonial-card">
+                <div>
+                    <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Mike Johnson Photo" class="testimonial-img">
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit doloribus possimus optio temporibus accusantium maxime dolore nisi, facilis vero itaque, quos officia culpa magnam praesentium commodi tempora illo saepe esse non sapiente? Adipisci, corporis quidem! Atque maiores iusto, accusantium numquam alias adipisci nostrum placeat nobis assumenda, architecto amet facilis. Enim?</p>
+                <h4>- Mike Johnson</h4>
+                <span>Designer, Google</span>
+            </div>
+            <div class="testimonial-card">
+                <div>
+                    <img src="https://randomuser.me/api/portraits/men/57.jpg" alt="Mike Johnson Photo" class="testimonial-img"> 
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit doloribus possimus optio temporibus accusantium maxime dolore nisi, facilis vero itaque, quos officia culpa magnam praesentium commodi tempora illo saepe esse non sapiente? Adipisci, corporis quidem! Atque maiores iusto, accusantium numquam alias adipisci nostrum placeat nobis assumenda, architecto amet facilis. Enim?</p>
+                <h4>- Maverick</h4>
+                <span>CEO, Google</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" aria-label="contact section">
+        <h2>Contact Me</h2>
+        <form class="contact-form" role="form" aria-label="Contact Form">
+            <input type="text" name="name" placeholder="Your Name" required aria-required="true">
+            <input type="email" name="email" placeholder="Your Email" required aria-required="true">
+            <textarea name="message" rows="5" placeholder="Your Message" required aria-required="true"></textarea>
+            <button type="submit" class="btn" aria-label="Send Message">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        <h3>Find Me:</h2>
+        <iframe title="ExploreWorld Office Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019835235083!2d-122.41941538468187!3d37.77492977975932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d9d7b8a3%3A0x47fca1f7b3b9b0e!2sTravel%20Agency!5e0!3m2!1sen!2sin!4v1680000000000" allowfullscreen="" loading="lazy"></iframe>
+    </footer>
+</body>
+</html>
