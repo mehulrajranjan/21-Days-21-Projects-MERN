@@ -35,3 +35,9 @@ To consistently build and share small projects every day for 21 days, enhancing 
 1. Clone this repo:
    ```bash
    git clone https://github.com/yourusername/21-Days-21-Projects-MERN.git
+
+---
+
+👋 **Designed & Built by [Mehul Raj Ranjan](https://www.linkedin.com/in/your-linkedin-username/)**  
+💼 [LinkedIn](https://www.linkedin.com/in/mehul-raj-ranjan/) | 💻 [GitHub](https://github.com/mehulrajranjan) | 📧 [Email](mailto:youremail@example.com)
+
