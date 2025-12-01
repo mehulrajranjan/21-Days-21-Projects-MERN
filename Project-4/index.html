@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Board</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="antialiased text-slate-800 bg-slate-50">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 relative">
+          <!-- LOGO -->
+          <a href="#home" class="flex items-center gap-2 group">
+            <div
+              class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white font-bold shadow-sm group-hover:scale-105 transition-transform"
+            >
+              HUB
+            </div>
+            <div class="hidden sm:block leading-tight">
+              <div class="text-lg font-semibold text-slate-800">
+                TalentHub<span class="text-green-500"> Jobs</span>
+              </div>
+              <div class="text-xs text-slate-500">Jobs • Hiring • Careers</div>
+            </div>
+          </a>
+
+          <!-- DESKTOP NAV -->
+          <nav
+            class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600"
+          >
+            <a
+              href="#jobs"
+              class="px-3 py-2 rounded-md hover:bg-slate-100 transition"
+              >Jobs</a
+            >
+            <a
+              href="#companies"
+              class="px-3 py-2 rounded-md hover:bg-slate-100 transition"
+              >Companies</a
+            >
+            <a
+              href="#salaries"
+              class="px-3 py-2 rounded-md hover:bg-slate-100 transition"
+              >Salaries</a
+            >
+            <a
+              href="#resources"
+              class="px-3 py-2 rounded-md hover:bg-slate-100 transition"
+              >Resources</a
+            >
+
+            <a
+              href="#recruiter"
+              class="px-4 py-2 rounded-md border border-slate-300 text-slate-700 hover:bg-slate-100 transition"
+            >
+              Recruiter Login
+            </a>
+
+            <a
+              href="#post-job"
+              class="px-4 py-2 rounded-md bg-green-500 text-white hover:bg-green-600 transition"
+            >
+              Post a Job
+            </a>
+          </nav>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button
+            id="menuBtn"
+            class="lg:hidden p-2 rounded-md hover:bg-slate-100"
+          >
+            <svg
+              class="w-6 h-6 text-slate-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+
+          <!-- MOBILE RIGHT SIDEBAR DROPDOWN -->
+          <div
+            id="mobileMenu"
+            class="hidden absolute right-0 top-16 w-48 bg-white shadow-lg rounded-lg border border-slate-200 py-2 text-sm font-medium"
+          >
+            <a href="#jobs" class="block px-4 py-2 hover:bg-slate-100">Jobs</a>
+            <a href="#companies" class="block px-4 py-2 hover:bg-slate-100"
+              >Companies</a
+            >
+            <a href="#salaries" class="block px-4 py-2 hover:bg-slate-100"
+              >Salaries</a
+            >
+            <a href="#resources" class="block px-4 py-2 hover:bg-slate-100"
+              >Resources</a
+            >
+
+            <a
+              href="#recruiter"
+              class="block px-4 py-2 border-t border-slate-200 hover:bg-slate-100"
+            >
+              Recruiter Login
+            </a>
+
+            <a
+              href="#post-job"
+              class="block px-4 py-2 bg-green-500 text-white rounded-b-lg hover:bg-green-600 mt-1"
+            >
+              Post a Job
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section
+      id="home"
+      class="bg-gradient-to-b from-slate-100 to-white pt-20 pb-24"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- GRID CONTAINER -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <!-- LEFT MAIN AREA -->
+          <div class="lg:col-span-2 space-y-10">
+            <!-- Headline -->
+            <div class="text-center lg:text-left">
+              <h1
+                class="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight"
+              >
+                Find Your <span class="text-green-600">Dream Job</span> Today
+              </h1>
+              <p class="mt-4 text-slate-600 text-base">
+                Explore thousands of open positions from top companies across
+                India and worldwide.
+              </p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="max-w-3xl">
+              <div
+                class="bg-white rounded-xl shadow-lg p-5 flex flex-col sm:flex-row gap-3"
+              >
+                <input
+                  type="text"
+                  placeholder="Job title or keyword"
+                  class="w-full px-4 py-3 rounded-md border border-slate-300"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Location"
+                  class="w-full px-4 py-3 rounded-md border border-slate-300"
+                />
+
+                <button
+                  class="w-full sm:w-auto px-6 py-3 bg-green-600 text-white font-medium rounded-md hover:bg-green-700 transition"
+                >
+                  Search
+                </button>
+              </div>
+              <!-- QUICK FILTERS -->
+              <div class="mt-6 flex flex-wrap gap-3 text-sm">
+                <span
+                  class="px-3 py-1.5 rounded-full bg-green-600 text-white border border-green-600 hover:bg-white hover:text-green-600 transition"
+                  >Remote</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-green-600 text-white border border-green-600 hover:bg-white hover:text-green-600 transition"
+                  >Full-time</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-green-600 text-white border border-green-600 hover:bg-white hover:text-green-600 transition"
+                  >Immediate Joiners</span
+                >
+                <span
+                  class="px-3 py-1.5 rounded-full bg-green-600 text-white border border-green-600 hover:bg-white hover:text-green-600 transition"
+                >
+                  Data Science
+                </span>
+              </div>
+              <!-- TOP TECH COMPANIES -->
+              <div class="mt-6 text-sm text-slate-600">
+                <span>Top Tech Companies:</span>
+                <a href="#" class="text-green-600 hover:underline mx-1"
+                  >Google</a
+                >,
+                <a href="#" class="text-green-600 hover:underline mx-1"
+                  >Amazon</a
+                >,
+                <a href="#" class="text-green-600 hover:underline mx-1"
+                  >Microsoft</a
+                >,
+                <a href="#" class="text-green-600 hover:underline mx-1"
+                  >Facebook</a
+                >,
+                <a href="#" class="text-green-600 hover:underline mx-1"
+                  >Apple</a
+                >
+              </div>
+            </div>
+            <!-- Stats -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div
+                class="text-center p-4 bg-white shadow rounded-xl border border-slate-200"
+              >
+                <div class="text-3xl font-bold text-green-600">25k+</div>
+                <div class="text-slate-500 mt-1 text-sm">Active Listings</div>
+              </div>
+
+              <div
+                class="text-center p-4 bg-white shadow rounded-xl border border-slate-200"
+              >
+                <div class="text-3xl font-bold text-green-600">8k+</div>
+                <div class="text-slate-500 mt-1 text-sm">Hiring Companies</div>
+              </div>
+
+              <div
+                class="text-center p-4 bg-white shadow rounded-xl border border-slate-200"
+              >
+                <div class="text-3xl font-bold text-green-600">120k+</div>
+                <div class="text-slate-500 mt-1 text-sm">Job Seekers</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDEBAR -->
+          <aside
+            class="bg-white shadow-lg rounded-xl p-6 border border-slate-200 h-fit sticky top-40"
+          >
+            <h2 class="text-lg font-semibold mb-4 text-slate-800">
+              Live Job Insights
+            </h2>
+
+            <div class="space-y-4">
+              <div
+                class="p-4 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center"
+              >
+                <div>
+                  <p class="text-sm text-slate-600">Active Jobs</p>
+                  <p class="text-2xl font-bold text-green-600">25,842</p>
+                </div>
+                <span class="text-green-600 text-sm font-medium">
+                  +320 today
+                </span>
+              </div>
+
+              <div
+                class="p-4 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center"
+              >
+                <div>
+                  <p class="text-sm text-slate-600">New This Week</p>
+                  <p class="text-2xl font-bold text-green-600">4,510</p>
+                </div>
+                <span class="text-green-600 text-sm font-medium"> +8.1% </span>
+              </div>
+
+              <div
+                class="p-4 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center"
+              >
+                <div>
+                  <p class="text-sm text-slate-600">Active Companies</p>
+                  <p class="text-2xl font-bold text-green-600">8,164</p>
+                </div>
+                <span class="text-green-600 text-sm font-medium">
+                  +127 today
+                </span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVAILABLE JOBS (Theme: green) -->
+    <section
+      id="available-jobs"
+      class="pt-20 pb-24 bg-gradient-to-b from-slate-50 to-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+            Available <span class="text-green-600">Jobs</span>
+          </h2>
+          <p class="mt-2 text-slate-500">
+            Explore
+            <a href="#jobs" class="text-green-600 font-medium hover:underline"
+              >1,234</a
+            >
+            open roles from verified companies.
+          </p>
+        </div>
+
+        <!-- Filter pills -->
+        <div class="flex items-center justify-center">
+          <div
+            id="filters"
+            class="inline-flex gap-3 bg-white p-1 rounded-full shadow-sm border border-slate-200"
+          >
+            <button
+              class="filter-pill px-4 py-2 rounded-full text-sm font-medium bg-green-600 text-white shadow-sm"
+            >
+              All
+            </button>
+            <button
+              class="filter-pill px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:bg-slate-100"
+            >
+              Tech
+            </button>
+            <button
+              class="filter-pill px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:bg-slate-100"
+            >
+              Design
+            </button>
+            <button
+              class="filter-pill px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:bg-slate-100"
+            >
+              Marketing
+            </button>
+            <button
+              class="filter-pill px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:bg-slate-100"
+            >
+              Remote
+            </button>
+          </div>
+        </div>
+
+        <!-- Jobs Grid -->
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <article
+            class="bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition p-6 flex flex-col"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white font-semibold"
+                >
+                  TW
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900">
+                    Frontend Developer (React)
+                  </h3>
+                  <p class="text-sm text-slate-500 mt-1">
+                    TechWave • Bengaluru
+                  </p>
+                </div>
+              </div>
+              <button class="p-2 rounded-md hover:text-green-400">
+                <!-- bookmark icon (outline) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <p class="text-slate-600 text-sm mt-4 grow">
+              Build modern, responsive UIs with React and Tailwind. Collaborate
+              with product teams to deliver great user experiences.
+            </p>
+
+            <div
+              class="mt-4 flex items-center justify-between text-xs text-slate-500"
+            >
+              <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1"
+                  ><svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M12 8c2.2 0 4-1.8 4-4S14.2 0 12 0s-4 1.8-4 4 1.8 4 4 4zM3 20v-2a4 4 0 014-4h10a4 4 0 014 4v2"
+                    />
+                  </svg>
+                  6 - 10 LPA</span
+                >
+                <span class="flex items-center gap-1"
+                  ><svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 20h5v-2a4 4 0 00-4-4h-1M2 20h5v-2a4 4 0 00-4-4H2"
+                    />
+                  </svg>
+                  2 - 4 yrs</span
+                >
+              </div>
+              <div class="text-slate-400">Posted 2 days ago</div>
+            </div>
+
+            <div class="mt-5 flex items-center justify-between">
+              <div class="flex gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                  >Remote</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                  >Full-time</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 transition"
+              >
+                Apply Now
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition p-6 flex flex-col"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-semibold"
+                >
+                  NL
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900">
+                    Full Stack Engineer (Node + React)
+                  </h3>
+                  <p class="text-sm text-slate-500 mt-1">
+                    Nexa Labs • Hyderabad
+                  </p>
+                </div>
+              </div>
+              <button class="p-2 rounded-md hover:text-green-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <p class="text-slate-600 text-sm mt-4 grow">
+              Develop scalable backend APIs using Node.js and deliver fast,
+              responsive React frontends. CI/CD and testing experience
+              preferred.
+            </p>
+
+            <div
+              class="mt-4 flex items-center justify-between text-xs text-slate-500"
+            >
+              <div class="flex items-center gap-4">
+                <span>10 - 18 LPA</span>
+                <span>3 - 7 yrs</span>
+              </div>
+              <div class="text-slate-400">Posted 1 week ago</div>
+            </div>
+
+            <div class="mt-5 flex items-center justify-between">
+              <div class="flex gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                  >On-site</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 transition"
+              >
+                Apply Now
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition p-6 flex flex-col"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-white font-semibold"
+                >
+                  IE
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900">
+                    Data Analyst
+                  </h3>
+                  <p class="text-sm text-slate-500 mt-1">
+                    InsightEdge • Remote
+                  </p>
+                </div>
+              </div>
+              <button class="p-2 rounded-md hover:text-green-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <p class="text-slate-600 text-sm mt-4 grow">
+              Analyze metrics, create dashboards, and present data-driven
+              insights. Strong SQL and Python skills required.
+            </p>
+
+            <div
+              class="mt-4 flex items-center justify-between text-xs text-slate-500"
+            >
+              <div class="flex items-center gap-4">
+                <span>4 - 6 LPA</span>
+                <span>1 - 3 yrs</span>
+              </div>
+              <div class="text-slate-400">Posted 5 days ago</div>
+            </div>
+
+            <div class="mt-5 flex items-center justify-between">
+              <div class="flex gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                  >Remote</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 transition"
+              >
+                Apply Now
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- View More -->
+        <div class="text-center mt-12">
+          <button
+            class="px-6 py-3 rounded-full border border-green-600 text-green-600 hover:bg-green-50 transition"
+          >
+            View More Jobs
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOB LISTINGS (Green themed, desktop layout like your reference) -->
+    <section
+      id="job-listings"
+      class="pt-16 pb-24 bg-gradient-to-b from-slate-50 to-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+            Job Listings
+          </h2>
+          <p class="mt-2 text-slate-500">
+            Discover your next career opportunity. Curated jobs just for you.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- LEFT: Filters area (col-span 3) -->
+          <aside class="lg:col-span-3">
+            <div class="sticky top-28 space-y-6">
+              <!-- Filters box -->
+              <div
+                class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm"
+              >
+                <h3 class="text-sm font-semibold text-slate-800 mb-3">
+                  Job Filters
+                </h3>
+
+                <label class="block text-xs text-slate-600">Experience</label>
+                <select
+                  id="expFilter"
+                  class="mt-2 w-full rounded-md border border-slate-200 px-3 py-2 text-sm bg-white"
+                >
+                  <option value="All">Any Experience</option>
+                  <option value="0-2">0 - 2 yrs</option>
+                  <option value="2-5">2 - 5 yrs</option>
+                  <option value="5+">5+ yrs</option>
+                </select>
+
+                <label class="block text-xs text-slate-600 mt-4"
+                  >Salary (LPA)</label
+                >
+                <select
+                  id="salaryFilter"
+                  class="mt-2 w-full rounded-md border border-slate-200 px-3 py-2 text-sm bg-white"
+                >
+                  <option value="All">Any Salary</option>
+                  <option value="0-4">0 - 4</option>
+                  <option value="4-8">4 - 8</option>
+                  <option value="8-12">8 - 12</option>
+                  <option value="12+">12+</option>
+                </select>
+
+                <div class="mt-4 text-sm text-slate-700">Job Type</div>
+                <div class="mt-2 space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="job-type"
+                      value="Full-time"
+                    />
+                    Full-time</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input type="checkbox" class="job-type" value="Remote" />
+                    Remote</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input type="checkbox" class="job-type" value="Contract" />
+                    Contract</label
+                  >
+                </div>
+
+                <button
+                  id="clearFilters"
+                  class="mt-4 w-full px-4 py-2 text-sm rounded-md border border-slate-300 bg-white hover:bg-slate-50"
+                >
+                  Clear Filters
+                </button>
+              </div>
+
+              <!-- Create Job Alert (gradient card) -->
+              <div
+                class="bg-gradient-to-br from-green-500 to-emerald-500 text-white rounded-2xl p-5 shadow-lg"
+              >
+                <h4 class="font-semibold">Create Job Alert</h4>
+                <p class="text-sm mt-1 mb-3 opacity-90">
+                  Get notified when new jobs match your criteria.
+                </p>
+                <div class="flex gap-2">
+                  <input
+                    id="alertEmail"
+                    type="email"
+                    placeholder="you@email.com"
+                    class="w-full rounded-md px-3 py-2 text-sm text-slate-800"
+                  />
+                  <button
+                    id="createAlertBtn"
+                    class="px-4 py-2 rounded-md bg-white/90 text-green-700 font-medium hover:opacity-95"
+                  >
+                    Create
+                  </button>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT: Listings and controls (col-span 9) -->
+          <div class="lg:col-span-9">
+            <!-- Top bar: results count & sort -->
+            <div
+              class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6"
+            >
+              <div>
+                <span class="text-green-600 font-semibold" id="resultsCount"
+                  >1,234</span
+                >
+                <span class="text-slate-600 ml-2">jobs found</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <label class="text-sm text-slate-600 mr-2 hidden md:inline"
+                  >Sort by:</label
+                >
+                <select
+                  id="sortBy"
+                  class="rounded-md border border-slate-200 px-3 py-2 text-sm bg-white"
+                >
+                  <option value="relevance">Most Relevant</option>
+                  <option value="newest">Newest</option>
+                  <option value="salary-desc">Salary (High → Low)</option>
+                  <option value="salary-asc">Salary (Low → High)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Cards grid -->
+            <div
+              id="listingsGrid"
+              class="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              <!-- Card A -->
+              <article
+                class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col job-card"
+                data-category="Tech"
+                data-experience="4-8"
+                data-salary="12"
+                data-location="Bengaluru"
+                data-posted="2025-11-26"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white font-semibold"
+                    >
+                      TW
+                    </div>
+                    <div>
+                      <div class="text-xs text-slate-500">TechWave</div>
+                      <h3 class="text-lg font-semibold text-slate-900">
+                        Senior Frontend Engineer
+                      </h3>
+                    </div>
+                  </div>
+                  <button class="p-2 rounded-md hover:text-green-400">
+                    <!-- bookmark icon (outline) -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="mt-4 text-slate-600 text-sm flex-1">
+                  Build and ship UI components with React and Tailwind. Mentor
+                  juniors and own frontend features end-to-end.
+                </div>
+
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-slate-500"
+                >
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >4 - 8 yrs</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >₹12 - 18 LPA</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >Bengaluru</span
+                    >
+                  </div>
+                  <div class="text-slate-400 text-xs">Posted 2 days ago</div>
+                </div>
+
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="flex gap-2">
+                    <span
+                      class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                      >Full-time</span
+                    >
+                    <span
+                      class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                      >Remote</span
+                    >
+                  </div>
+                  <button
+                    class="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700"
+                  >
+                    Apply Now
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card B -->
+              <article
+                class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col job-card"
+                data-category="Tech"
+                data-experience="3-6"
+                data-salary="11"
+                data-location="Hyderabad"
+                data-posted="2025-11-20"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-semibold"
+                    >
+                      NL
+                    </div>
+                    <div>
+                      <div class="text-xs text-slate-500">Nexa Labs</div>
+                      <h3 class="text-lg font-semibold text-slate-900">
+                        Backend Engineer (Node)
+                      </h3>
+                    </div>
+                  </div>
+                  <button class="p-2 rounded-md hover:text-green-400">
+                    <!-- bookmark icon (outline) -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="mt-4 text-slate-600 text-sm flex-1">
+                  Own and scale backend services using Node.js. Experience with
+                  microservices and CI/CD preferred.
+                </div>
+
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-slate-500"
+                >
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >3 - 6 yrs</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >₹10 - 15 LPA</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >Hyderabad</span
+                    >
+                  </div>
+                  <div class="text-slate-400 text-xs">Posted 6 days ago</div>
+                </div>
+
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="flex gap-2">
+                    <span
+                      class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                      >Full-time</span
+                    >
+                  </div>
+                  <button
+                    class="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700"
+                  >
+                    Apply Now
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card C -->
+              <article
+                class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col job-card"
+                data-category="Design"
+                data-experience="1-3"
+                data-salary="6"
+                data-location="Remote"
+                data-posted="2025-11-22"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-white font-semibold"
+                    >
+                      IE
+                    </div>
+                    <div>
+                      <div class="text-xs text-slate-500">InsightEdge</div>
+                      <h3 class="text-lg font-semibold text-slate-900">
+                        Data Scientist
+                      </h3>
+                    </div>
+                  </div>
+                  <button class="p-2 rounded-md hover:text-green-400">
+                    <!-- bookmark icon (outline) -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="mt-4 text-slate-600 text-sm flex-1">
+                  Analyze metrics, build dashboards and provide insights. Strong
+                  SQL and Python skills needed.
+                </div>
+
+                <div
+                  class="mt-4 flex items-center justify-between text-xs text-slate-500"
+                >
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >1 - 3 yrs</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >₹4 - 6 LPA</span
+                    >
+                    <span
+                      class="px-2 py-1 bg-slate-50 border border-slate-200 rounded-full text-slate-600"
+                      >Remote</span
+                    >
+                  </div>
+                  <div class="text-slate-400 text-xs">Posted 4 days ago</div>
+                </div>
+
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="flex gap-2">
+                    <span
+                      class="px-3 py-1 rounded-full text-xs bg-slate-50 border border-slate-200 text-slate-600"
+                      >Remote</span
+                    >
+                  </div>
+                  <button
+                    class="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700"
+                  >
+                    Apply Now
+                  </button>
+                </div>
+              </article>
+
+              <!-- Add more cards as needed... -->
+            </div>
+
+            <!-- pagination -->
+            <div class="mt-8 flex items-center justify-between">
+              <div class="text-sm text-slate-500" id="paginationInfo">
+                Showing 1 - 4 of <span id="paginationTotal">1,234</span>
+              </div>
+              <div class="flex gap-2">
+                <button
+                  id="prevPage"
+                  class="px-4 py-2 rounded-md border border-slate-200 bg-white text-sm text-slate-700 hover:bg-slate-50"
+                >
+                  Previous
+                </button>
+                <button
+                  id="nextPage"
+                  class="px-4 py-2 rounded-md border border-slate-200 bg-white text-sm text-slate-700 hover:bg-slate-50"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR JOBS -->
+    <section
+      id="popular-jobs"
+      class="pt-16 pb-20 bg-gradient-to-b from-white to-slate-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Popular Jobs
+            </h2>
+            <p class="text-sm text-slate-500 mt-1">
+              Roles trending among candidates this week.
+            </p>
+          </div>
+          <a
+            href="#available-jobs"
+            class="text-sm font-medium text-green-600 hover:underline hidden sm:inline"
+            >View all jobs →</a
+          >
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Popular Card -->
+          <div
+            class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-md transition"
+          >
+            <div class="flex items-start gap-3">
+              <div
+                class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white font-semibold"
+              >
+                FE
+              </div>
+              <div class="flex-1">
+                <h3 class="text-sm font-semibold text-slate-900">
+                  Frontend Engineer
+                </h3>
+                <div class="text-xs text-slate-500 mt-1">
+                  TechWave • Bengaluru
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center justify-between">
+              <div class="text-xs text-slate-600">₹8 - 14 LPA</div>
+              <div class="text-xs text-slate-400">2 - 5 yrs</div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <span
+                class="px-2 py-1 rounded-full bg-slate-50 text-xs border border-slate-200"
+                >Remote</span
+              >
+              <button
+                class="ml-auto px-3 py-1 rounded-md bg-green-600 text-white text-xs hover:bg-green-700 transition"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular Card -->
+          <div
+            class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-md transition"
+          >
+            <div class="flex items-start gap-3">
+              <div
+                class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-semibold"
+              >
+                BE
+              </div>
+              <div class="flex-1">
+                <h3 class="text-sm font-semibold text-slate-900">
+                  Backend Engineer
+                </h3>
+                <div class="text-xs text-slate-500 mt-1">
+                  Nexa Labs • Hyderabad
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center justify-between">
+              <div class="text-xs text-slate-600">₹10 - 18 LPA</div>
+              <div class="text-xs text-slate-400">3 - 7 yrs</div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <span
+                class="px-2 py-1 rounded-full bg-slate-50 text-xs border border-slate-200"
+                >On-site</span
+              >
+              <button
+                class="ml-auto px-3 py-1 rounded-md bg-green-600 text-white text-xs hover:bg-green-700 transition"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular Card -->
+          <div
+            class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-md transition"
+          >
+            <div class="flex items-start gap-3">
+              <div
+                class="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-white font-semibold"
+              >
+                DA
+              </div>
+              <div class="flex-1">
+                <h3 class="text-sm font-semibold text-slate-900">
+                  Data Analyst
+                </h3>
+                <div class="text-xs text-slate-500 mt-1">
+                  InsightEdge • Remote
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center justify-between">
+              <div class="text-xs text-slate-600">₹4 - 6 LPA</div>
+              <div class="text-xs text-slate-400">1 - 3 yrs</div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <span
+                class="px-2 py-1 rounded-full bg-slate-50 text-xs border border-slate-200"
+                >Remote</span
+              >
+              <button
+                class="ml-auto px-3 py-1 rounded-md bg-green-600 text-white text-xs hover:bg-green-700 transition"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular Card -->
+          <div
+            class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-md transition"
+          >
+            <div class="flex items-start gap-3">
+              <div
+                class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white font-semibold"
+              >
+                FS
+              </div>
+              <div class="flex-1">
+                <h3 class="text-sm font-semibold text-slate-900">
+                  Full Stack Developer
+                </h3>
+                <div class="text-xs text-slate-500 mt-1">
+                  CodeGenius • Remote
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center justify-between">
+              <div class="text-xs text-slate-600">₹8 - 14 LPA</div>
+              <div class="text-xs text-slate-400">1 - 4 yrs</div>
+            </div>
+            <div class="mt-3 flex gap-2">
+              <span
+                class="px-2 py-1 rounded-full bg-slate-50 text-xs border border-slate-200"
+                >Contract</span
+              >
+              <button
+                class="ml-auto px-3 py-1 rounded-md bg-green-600 text-white text-xs hover:bg-green-700 transition"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <a
+            href="#available-jobs"
+            class="inline-block px-6 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50 transition"
+            >Browse more popular roles</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About -->
+          <div>
+            <a href="#home" class="inline-flex items-center gap-2">
+              <div
+                class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white font-bold"
+              >
+                HUB
+              </div>
+              <div class="text-lg font-semibold text-slate-900">
+                TalentHub<span class="text-green-600"> Jobs</span>
+              </div>
+            </a>
+            <p class="mt-4 text-sm text-slate-500">
+              Find jobs, connect with hiring teams, and build your career.
+              Trusted by thousands of companies.
+            </p>
+            <div class="mt-4 flex items-center gap-3">
+              <!-- simple social icons -->
+              <a
+                href="#"
+                class="p-2 rounded-md hover:bg-slate-100 text-slate-600"
+                ><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22 12a10 10 0 10-11.6 9.9v-7h-2v-3h2v-2.2c0-2 1.2-3.2 3-3.2.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0022 12z"
+                  /></svg>
+              </a>
+              <a
+                href="#"
+                class="p-2 rounded-md hover:bg-slate-100 text-slate-600"
+                ><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22 5.9a8.2 8.2 0 01-2.4.7 4.2 4.2 0 001.9-2.3 8.4 8.4 0 01-2.6 1 4.2 4.2 0 00-7.2 3 12 12 0 01-8.7-4.4 4.2 4.2 0 001.3 5.6 4.1 4.1 0 01-1.9-.5v.1a4.2 4.2 0 003.4 4.1 4.2 4.2 0 01-1.9.1 4.2 4.2 0 003.9 2.9A8.4 8.4 0 012 19.5 11.9 11.9 0 008.3 21c7.5 0 11.6-6.2 11.6-11.6v-.5A8.3 8.3 0 0022 5.9z"
+                  /></svg>
+              </a>
+              <a
+                href="#"
+                class="p-2 rounded-md hover:bg-slate-100 text-slate-600"
+                ><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.3 1 .6 1.5 1.1.5.5.8 1 1.1 1.6.2.6.4 1.4.5 2.6.1 1.2.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.3.6-.6 1-1.1 1.5-.5.5-1 .8-1.6 1.1-.6.2-1.4.4-2.6.5-1.2.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.3-1-.6-1.5-1.1-.5-.5-.8-1-1.1-1.6-.2-.6-.4-1.4-.5-2.6-.1-1.2-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.3-.6.6-1 1.1-1.5.5-.5 1-.8 1.6-1.1.6-.2 1.4-.4 2.6-.5 1.2-.1 1.7-.1 4.9-.1zM12 5.8A6.2 6.2 0 105 12a6.2 6.2 0 007-6.2zM12 7.3a4.7 4.7 0 11-4.7 4.7A4.7 4.7 0 0112 7.3z"
+                  /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-sm font-semibold text-slate-800 mb-3">Company</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:underline">About</a></li>
+              <li><a href="#" class="hover:underline">Careers</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Browse -->
+          <div>
+            <h4 class="text-sm font-semibold text-slate-800 mb-3">Browse</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:underline">Jobs by category</a></li>
+              <li><a href="#" class="hover:underline">Companies</a></li>
+              <li><a href="#" class="hover:underline">Salaries</a></li>
+              <li><a href="#" class="hover:underline">Remote</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter / Contact -->
+          <div>
+            <h4 class="text-sm font-semibold text-slate-800 mb-3">
+              Stay updated
+            </h4>
+            <p class="text-sm text-slate-500 mb-3">
+              Subscribe to get new job alerts and tips.
+            </p>
+
+            <form id="footerNewsletter" class="flex gap-2">
+              <input
+                id="footerEmail"
+                type="email"
+                placeholder="you@email.com"
+                class="w-full rounded-md border border-slate-200 px-3 py-2 text-sm"
+              />
+              <button
+                type="submit"
+                class="px-4 py-2 rounded-md bg-green-600 text-white text-sm hover:bg-green-700 transition"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="mt-10 border-t border-slate-100 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+        >
+          <div class="text-sm text-slate-500">
+            © <span id="year"></span> TalentHub Jobs. All rights reserved.
+          </div>
+          <div class="flex items-center gap-4 text-sm text-slate-500">
+            <a href="#" class="hover:underline">Privacy</a>
+            <a href="#" class="hover:underline">Terms</a>
+            <a href="#" class="hover:underline">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Elements (guarded - may be missing on some pages)
+        const jobCards = Array.from(document.querySelectorAll(".job-card"));
+        const resultsCount = document.getElementById("resultsCount");
+        const totalCount = document.getElementById("totalCount");
+        const paginationTotal = document.getElementById("paginationTotal");
+        const showingCount = document.getElementById("showingCount");
+        const expFilter = document.getElementById("expFilter");
+        const salaryFilter = document.getElementById("salaryFilter");
+        const jobTypeInputs = Array.from(
+          document.querySelectorAll(".job-type")
+        );
+        const clearFilters = document.getElementById("clearFilters");
+        const sortBy = document.getElementById("sortBy");
+        const listingsGrid = document.getElementById("listingsGrid");
+
+        // pagination controls
+        const prevBtn = document.getElementById("prevPage");
+        const nextBtn = document.getElementById("nextPage");
+
+        // sanity: if listingsGrid missing, stop early
+        if (!listingsGrid) {
+          // still attach filter-pill and menu listeners below
+          attachMiscListeners();
+          return;
+        }
+
+        // pagination state
+        let page = 1;
+        const pageSize = 6; // items per page
+        const allCards = jobCards.slice(); // initial snapshot
+
+        // set counts safely
+        const initialCount = allCards.length || 0;
+        if (totalCount) totalCount.textContent = initialCount || 1234;
+        if (paginationTotal)
+          paginationTotal.textContent = totalCount
+            ? totalCount.textContent
+            : initialCount;
+        if (resultsCount)
+          resultsCount.textContent = totalCount
+            ? totalCount.textContent
+            : initialCount;
+
+        function parseNumber(v) {
+          const n = Number(v);
+          return isNaN(n) ? 0 : n;
+        }
+
+        // filtering + sorting + pagination
+        function applyFiltersAndSort() {
+          const expVal = expFilter ? expFilter.value : "All";
+          const salaryVal = salaryFilter ? salaryFilter.value : "All";
+          const activeTypes = jobTypeInputs
+            .filter((i) => i.checked)
+            .map((i) => i.value);
+
+          // filter
+          let filtered = allCards.filter((c) => {
+            const cardExp = c.dataset.experience || "";
+            const cardSalary = parseNumber(
+              c.dataset.salary || c.dataset.salaryMin || c.dataset.salary
+            );
+            // experience match (loose match)
+            let expMatch =
+              expVal === "All" || cardExp.includes(expVal.replace("-", ""));
+            // salary match
+            let salaryMatch = true;
+            if (salaryVal !== "All") {
+              if (salaryVal === "0-4") salaryMatch = cardSalary <= 4;
+              else if (salaryVal === "12+") salaryMatch = cardSalary >= 12;
+              else {
+                const parts = salaryVal.split("-");
+                const low = Number(parts[0] || 0);
+                const high = Number(parts[1] || low);
+                salaryMatch = cardSalary >= low && cardSalary <= high;
+              }
+            }
+            // job type match (search text inside card as simple heuristic)
+            let typeMatch =
+              activeTypes.length === 0 ||
+              activeTypes.some((t) => c.textContent.includes(t));
+            return expMatch && salaryMatch && typeMatch;
+          });
+
+          // sort
+          const sort = sortBy ? sortBy.value : "relevance";
+          if (sort === "newest") {
+            filtered.sort(
+              (a, b) => new Date(b.dataset.posted) - new Date(a.dataset.posted)
+            );
+          } else if (sort === "salary-desc") {
+            filtered.sort(
+              (a, b) =>
+                parseNumber(b.dataset.salary) - parseNumber(a.dataset.salary)
+            );
+          } else if (sort === "salary-asc") {
+            filtered.sort(
+              (a, b) =>
+                parseNumber(a.dataset.salary) - parseNumber(b.dataset.salary)
+            );
+          }
+
+          // update counts
+          if (resultsCount) resultsCount.textContent = filtered.length;
+          if (paginationTotal) paginationTotal.textContent = filtered.length;
+
+          // clamp page
+          const maxPage = Math.max(1, Math.ceil(filtered.length / pageSize));
+          if (page > maxPage) page = maxPage;
+
+          // pagination slice
+          const start = (page - 1) * pageSize;
+          const end = start + pageSize;
+          const pageItems = filtered.slice(start, end);
+
+          // render
+          listingsGrid.innerHTML = "";
+          pageItems.forEach((el) => listingsGrid.appendChild(el));
+
+          // update showing text
+          const showFrom = filtered.length === 0 ? 0 : start + 1;
+          const showTo = Math.min(end, filtered.length);
+          if (showingCount)
+            showingCount.textContent = `${showFrom} - ${showTo}`;
+          const paginationInfo = document.getElementById("paginationInfo");
+          if (paginationInfo)
+            paginationInfo.innerText = `Showing ${showFrom} - ${showTo} of ${filtered.length}`;
+        }
+
+        // attach events only if elements exist
+        if (expFilter)
+          expFilter.addEventListener("change", () => {
+            page = 1;
+            applyFiltersAndSort();
+          });
+        if (salaryFilter)
+          salaryFilter.addEventListener("change", () => {
+            page = 1;
+            applyFiltersAndSort();
+          });
+        if (jobTypeInputs.length)
+          jobTypeInputs.forEach((i) =>
+            i.addEventListener("change", () => {
+              page = 1;
+              applyFiltersAndSort();
+            })
+          );
+        if (clearFilters)
+          clearFilters.addEventListener("click", () => {
+            if (expFilter) expFilter.value = "All";
+            if (salaryFilter) salaryFilter.value = "All";
+            jobTypeInputs.forEach((i) => (i.checked = false));
+            page = 1;
+            applyFiltersAndSort();
+          });
+        if (sortBy)
+          sortBy.addEventListener("change", () => {
+            page = 1;
+            applyFiltersAndSort();
+          });
+
+        if (prevBtn)
+          prevBtn.addEventListener("click", () => {
+            if (page > 1) {
+              page--;
+              applyFiltersAndSort();
+            }
+          });
+        if (nextBtn)
+          nextBtn.addEventListener("click", () => {
+            page++;
+            applyFiltersAndSort();
+          });
+
+        // create job alert
+        const createAlertBtn = document.getElementById("createAlertBtn");
+        if (createAlertBtn) {
+          createAlertBtn.addEventListener("click", () => {
+            const emailInput = document.getElementById("alertEmail");
+            const email = emailInput ? emailInput.value.trim() : "";
+            if (!email) {
+              alert("Please enter email to create alert.");
+              return;
+            }
+            alert("Job alert created for " + email);
+            if (emailInput) emailInput.value = "";
+          });
+        }
+
+        // initial render
+        applyFiltersAndSort();
+
+        // responsiveness - reapply on resize (debounced)
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => applyFiltersAndSort(), 150);
+        });
+
+        // move filter-pill and menu listeners into same DOM ready context for reliability
+        attachMiscListeners();
+
+        // helper to attach misc listeners (filter pills + mobile menu)
+        function attachMiscListeners() {
+          // Filter pill click handling (if #filters exists)
+          document.querySelectorAll("#filters .filter-pill").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              document
+                .querySelectorAll("#filters .filter-pill")
+                .forEach((b) => {
+                  b.classList.remove("bg-green-600", "text-white", "shadow-sm");
+                  b.classList.add("text-slate-700");
+                });
+              e.currentTarget.classList.add(
+                "bg-green-600",
+                "text-white",
+                "shadow-sm"
+              );
+              e.currentTarget.classList.remove("text-slate-700");
+              // optional: link this to your filtering state if desired
+            });
+          });
+
+          // mobile menu toggle (guarded)
+          const menuBtn = document.getElementById("menuBtn");
+          const mobileMenu = document.getElementById("mobileMenu");
+          if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+            });
+          }
+        }
+      });
+      // newsletter handler + year
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const footerForm = document.getElementById("footerNewsletter");
+      if (footerForm) {
+        footerForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = document.getElementById("footerEmail").value.trim();
+          if (!email) {
+            alert("Please enter a valid email.");
+            return;
+          }
+          // in real app, POST to your API. For demo, show a message.
+          alert("Thanks — subscription saved: " + email);
+          document.getElementById("footerEmail").value = "";
+        });
+      }
+    </script>
+  </body>
+</html>
