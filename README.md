@@ -12,8 +12,8 @@ Each project focuses on learning, experimenting, and building something new ever
 |-----|---------------|------------|------------|
 | 1️⃣ | [ExploreWorld – Tourism Portal UI](./Project-1) | HTML, CSS | [Live Link](https://21-days-21-projects-mern.vercel.app/) |
 | 2️⃣ | [Portfolio Website UI](./Project-2) | HTML, CSS, JavaScript | [Live Link](https://21-days-21-projects-mern-tyar.vercel.app/) |
-| 3️⃣ | [Portfolio Website UI](./Project-3) | HTML, CSS, Bootstrap | [Live Link](https://21-days-21-projects-mern-rc7c-cyak0nfzd.vercel.app/) |
-| 4️⃣ | [Portfolio Website UI](./Project-4) | HTML, CSS, Tailwind CSS | [Live Link](https://21-days-21-projects-mern-qdno.vercel.app/) |
+| 3️⃣ | [Smart Resource Manager](./Project-3) | HTML, CSS, Bootstrap | [Live Link](https://21-days-21-projects-mern-rc7c-cyak0nfzd.vercel.app/) |
+| 4️⃣ | [Career Board Pro](./Project-4) | HTML, CSS, Tailwind CSS | [Live Link](https://21-days-21-projects-mern-qdno.vercel.app/) |
 
 *(More projects coming soon...)*
 
