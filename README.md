@@ -12,7 +12,9 @@ Each project focuses on learning, experimenting, and building something new ever
 |-----|---------------|------------|------------|
 | 1️⃣ | [ExploreWorld – Tourism Portal UI](./Project-1) | HTML, CSS | [Live Link](https://21-days-21-projects-mern.vercel.app/) |
 | 2️⃣ | [Portfolio Website UI](./Project-2) | HTML, CSS, JavaScript | [Live Link](https://21-days-21-projects-mern-tyar.vercel.app/) |
-
+| 3️⃣ | [Smart Resource Manager](./Project-3) | HTML, CSS, Bootstrap | [Live Link](https://21-days-21-projects-mern-rc7c-cyak0nfzd.vercel.app/) |
+| 4️⃣ | [Career Board Pro](./Project-4) | HTML, CSS, Tailwind CSS | [Live Link](https://21-days-21-projects-mern-qdno.vercel.app/) |
+| 5 | [QuickSlot - Scheduler](./Project-5) | HTML, CSS, Tailwind CSS | [Live Link](https://21-days-21-projects-mern-qdno.vercel.app/) |
 *(More projects coming soon...)*
 
 ---
@@ -24,7 +26,9 @@ To consistently build and share small projects every day for 21 days, enhancing 
 
 ## ⚙️ Tech Stack
 - HTML  
-- CSS  
+- CSS
+- Bootstrap
+- Tailwind CSS  
 - JavaScript  
 - React (upcoming)  
 - Node.js, Express, MongoDB (later projects)
