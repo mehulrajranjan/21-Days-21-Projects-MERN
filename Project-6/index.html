@@ -1,138 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>ProResume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="app">
-    <header class="header">
-      <h1>ProResume</h1>
-      <p>Fill the form and see your resume update live.</p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resume Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <main class="main">
-      <!-- Left: Form -->
-      <section class="builder">
-        <form id="resume-form">
-          <h2 class="section-title">Personal Details</h2>
-          <div class="field">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" placeholder="John Doe" />
+    <!-- Bootstrap (for layout/utilities) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Optional: PDF export libs (script handles if missing) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============= AUTH SCREEN ============= -->
+    <div id="authContainer" class="auth-wrapper">
+      <div class="auth-card">
+        <div>
+          <div class="auth-pill">
+            ⚡ Schema-driven resume builder
           </div>
-          <div class="field">
-            <label for="jobTitle">Job Title</label>
-            <input type="text" id="jobTitle" placeholder="Frontend Developer" />
+          <h1 class="auth-title">Craft a clean resume in minutes.</h1>
+          <p class="auth-text">
+            Sign up once (saved only in your browser via localStorage), then fill
+            out the guided resume form with live preview & export.
+          </p>
+        </div>
+
+        <div class="auth-form-box">
+          <div class="auth-tabs">
+            <button
+              id="tabLogin"
+              type="button"
+              class="auth-tab-btn active"
+            >
+              Login
+            </button>
+            <button
+              id="tabSignup"
+              type="button"
+              class="auth-tab-btn"
+            >
+              Sign up
+            </button>
           </div>
 
-          <div class="field-grid">
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="john@example.com" />
+          <!-- LOGIN -->
+          <form id="loginForm">
+            <div class="mb-2">
+              <label class="form-label text-light" for="loginEmail">Email</label>
+              <input id="loginEmail" type="email" class="form-control" required />
             </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" placeholder="+91 98765 43210" />
+            <div class="mb-3">
+              <label class="form-label text-light" for="loginPassword">Password</label>
+              <input id="loginPassword" type="password" class="form-control" required />
             </div>
-          </div>
+            <button class="btn btn-info w-100 auth-submit" type="submit">
+              Continue
+            </button>
+          </form>
 
-          <div class="field-grid">
-            <div class="field">
-              <label for="address">Location</label>
-              <input type="text" id="address" placeholder="Mumbai, India" />
+          <!-- SIGNUP -->
+          <form id="signupForm" class="d-none">
+            <div class="mb-2">
+              <label class="form-label text-light" for="signupName">Full name</label>
+              <input id="signupName" type="text" class="form-control" required />
             </div>
-            <div class="field">
-              <label for="website">Website / LinkedIn</label>
-              <input type="url" id="website" placeholder="linkedin.com/in/username" />
+            <div class="mb-2">
+              <label class="form-label text-light" for="signupEmail">Email</label>
+              <input id="signupEmail" type="email" class="form-control" required />
             </div>
+            <div class="mb-3">
+              <label class="form-label text-light" for="signupPassword">Password</label>
+              <input id="signupPassword" type="password" class="form-control" required />
+            </div>
+            <button class="btn btn-info w-100 auth-submit" type="submit">
+              Sign up &amp; continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============= MAIN APP ============= -->
+    <div id="appContainer">
+      <div class="app-shell">
+        <!-- Header -->
+        <header class="app-header">
+          <div class="brand">
+            <div class="brand-logo">CV</div>
+            <div>
+              <div class="brand-text-title">Resume Studio</div>
+              <div class="brand-text-sub">Schema-driven · Live preview</div>
+            </div>
+            <span class="chip">
+              <span id="templateCount">0</span> templates ·
+              <span id="sectionCount">0</span> sections
+            </span>
           </div>
-
-          <h2 class="section-title">Summary</h2>
-          <div class="field">
-            <label for="summary">About You</label>
-            <textarea id="summary" rows="4" placeholder="A short professional summary..."></textarea>
+          <div class="header-right">
+            <button id="themeToggle" type="button" class="btn btn-outline-slate btn-sm">
+              Dark mode
+            </button>
+            <div class="user-pill">
+              <div id="userAvatar" class="user-avatar">U</div>
+              <span id="userEmailLabel">user@example.com</span>
+            </div>
+            <button id="logoutBtn" type="button" class="btn btn-outline-slate btn-sm">
+              Logout
+            </button>
           </div>
+        </header>
 
-          <h2 class="section-title">Skills</h2>
-          <div class="field">
-            <label for="skills">Skills (comma separated)</label>
-            <textarea id="skills" rows="3" placeholder="HTML, CSS, JavaScript, React"></textarea>
-          </div>
+        <!-- Main layout -->
+        <div class="app-main">
+          <!-- LEFT: FORM -->
+          <aside class="form-pane">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <div>
+                <div class="form-title-main">Resume form</div>
+                <div class="metrics-small">
+                  Fill in the sections – live preview on the right.
+                </div>
+              </div>
+              <div class="metrics-small">
+                <span id="liveMeta">0/0 sections ready · 0 fields filled</span>
+              </div>
+            </div>
 
-          <h2 class="section-title">Experience</h2>
-          <div class="field">
-            <label for="experience">Experience (each line = one entry)</label>
-            <textarea id="experience" rows="4" placeholder="- Frontend Developer at ABC (2023 - Present)
-- Intern at XYZ (2022 - 2023)"></textarea>
-          </div>
+            <div id="templatePills" class="mb-1"></div>
+            <div id="sectionNav" class="mb-1"></div>
 
-          <h2 class="section-title">Education</h2>
-          <div class="field">
-            <label for="education">Education (each line = one entry)</label>
-            <textarea id="education" rows="4" placeholder="- B.Tech in CSE, College Name (2020 - 2024)
-- Class 12th, School Name (2018 - 2020)"></textarea>
-          </div>
+            <div class="form-scroll">
+              <form id="resumeForm"></form>
+            </div>
 
-          <div class="actions">
-            <button type="button" id="clearBtn">Clear All</button>
-            <button type="button" id="printBtn">Download / Print</button>
-          </div>
-        </form>
-      </section>
+            <div class="form-footer">
+              <small class="text-muted">
+                Fields filled: <span id="fieldProgress">0</span>
+              </small>
+              <div class="d-flex gap-2">
+                <button id="resetBtn" class="btn btn-outline-slate btn-sm" type="button">
+                  Reset
+                </button>
+                <button id="downloadBtn" class="btn btn-info btn-sm text-dark fw-semibold" type="button">
+                  Export PDF
+                </button>
+              </div>
+            </div>
+          </aside>
 
-      <!-- Right: Resume Preview -->
-      <section class="preview-wrapper">
-        <div id="resume-preview" class="resume">
-          <header class="resume-header">
-            <h1 id="preview-name">Your Name</h1>
-            <p id="preview-title">Job Title</p>
-          </header>
+          <!-- RIGHT: PREVIEW -->
+          <section class="preview-pane">
+            <div class="preview-toolbar">
+              <div class="metrics-small">
+                🔍 Live Preview
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div class="preview-bg-toggle">
+                  <button
+                    type="button"
+                    class="preview-bg-btn active"
+                    data-preview-bg="plain"
+                  >
+                    Plain
+                  </button>
+                  <button
+                    type="button"
+                    class="preview-bg-btn"
+                    data-preview-bg="grid"
+                  >
+                    Grid
+                  </button>
+                  <button
+                    type="button"
+                    class="preview-bg-btn"
+                    data-preview-bg="slate"
+                  >
+                    Glow
+                  </button>
+                </div>
+                <select id="templateSelect" class="form-select form-select-sm">
+                  <!-- filled by JS -->
+                </select>
+              </div>
+            </div>
 
-          <div class="resume-contact">
-            <span id="preview-email">you@example.com</span>
-            <span id="preview-phone">+91 00000 00000</span>
-            <span id="preview-address">City, Country</span>
-            <span id="preview-website">your-portfolio.com</span>
-          </div>
-
-          <section class="resume-section">
-            <h2>Summary</h2>
-            <p id="preview-summary">
-              A short professional summary will appear here. Describe your experience, strengths, and what you’re looking for.
-            </p>
-          </section>
-
-          <section class="resume-section">
-            <h2>Skills</h2>
-            <ul id="preview-skills">
-              <li>Skill 1</li>
-              <li>Skill 2</li>
-              <li>Skill 3</li>
-            </ul>
-          </section>
-
-          <section class="resume-section">
-            <h2>Experience</h2>
-            <ul id="preview-experience">
-              <li>Experience item 1</li>
-              <li>Experience item 2</li>
-            </ul>
-          </section>
-
-          <section class="resume-section">
-            <h2>Education</h2>
-            <ul id="preview-education">
-              <li>Education item 1</li>
-              <li>Education item 2</li>
-            </ul>
+            <div class="preview-body">
+              <div id="resumePreview" class="resume-preview"></div>
+            </div>
           </section>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
