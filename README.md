@@ -14,7 +14,8 @@ Each project focuses on learning, experimenting, and building something new ever
 | 2️⃣ | [Portfolio Website UI](./Project-2) | HTML, CSS, JavaScript | [Live Link](https://21-days-21-projects-mern-tyar.vercel.app/) |
 | 3️⃣ | [Smart Resource Manager](./Project-3) | HTML, CSS, Bootstrap | [Live Link](https://21-days-21-projects-mern-rc7c-cyak0nfzd.vercel.app/) |
 | 4️⃣ | [Career Board Pro](./Project-4) | HTML, CSS, Tailwind CSS | [Live Link](https://21-days-21-projects-mern-qdno.vercel.app/) |
-| 5 | [QuickSlot - Scheduler](./Project-5) | HTML, CSS, Tailwind CSS | [Live Link](https://21-days-21-projects-mern-qdno.vercel.app/) |
+| 5️⃣ | [QuickSlot - Scheduler](./Project-5) | HTML, CSS, Tailwind CSS | [Live Link](https://21-days-21-projects-mern-qdno.vercel.app/) |
+| 6️⃣ | [ProResume](./Project-6) | HTML, CSS, JavaScript | [Live Link](https://21-days-21-projects-mern-jz61-kk6jbcfi6.vercel.app/) |
 *(More projects coming soon...)*
 
 ---
